@@ -1,0 +1,18 @@
+// main.less
+
+.set-color (@a) when (lightness(@a) >= 50%) {
+    background-color: black;
+}
+.set-color (@a) when (lightness(@a) < 50%) {
+    background-color: white;
+}
+.set-color (@a) {
+    color: @a;
+}
+
+p.dark {
+    .set-color(#ddd);
+}
+p.light {
+    .set-color(#555);
+}

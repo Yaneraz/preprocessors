@@ -1,0 +1,41 @@
+// main.less
+
+// <editor-fold desc="recursion">
+
+.loop(@counter) when (@counter > 0) {
+    .loop((@counter - 1));
+    width: (10px * @counter);
+}
+
+div {
+    .loop(5); // launch the loop
+}
+
+.generate-columns(@n, @i: 1) when (@i =< @n) {
+    .column-@{i} {
+        width: (@i * 100% / @n);
+    }
+    .generate-columns(@n, (@i + 1));
+}
+.generate-columns(4);
+
+// </editor-fold>
+
+// <editor-fold desc="pattern matching">
+
+.mixin(dark; @color) {
+    color: darken(@color, 10%);
+}
+.mixin(light; @color) {
+    color: lighten(@color, 10%);
+}
+.mixin(@_; @color) {
+    display: block;
+}
+
+@switch: light;
+
+.class {
+    .mixin(@switch; #888);
+}
+// </editor-fold>

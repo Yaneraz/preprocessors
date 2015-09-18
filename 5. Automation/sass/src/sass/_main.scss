@@ -1,0 +1,6 @@
+// Normally mainpage styles
+
+
+.whatever{
+ 	@include s(stars-ie-blue); //gets default value for spritemap as $icons
+ }

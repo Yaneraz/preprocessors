@@ -1,0 +1,28 @@
+// main.scss
+
+$link-color: #428bca;
+$link-color-hover: darken($link-color, 10%);
+$padding: 10px;
+
+a {
+    color: $link-color;
+}
+a:hover {
+    color: $link-color-hover;
+}
+p {
+    padding: $padding + 2
+}
+div.padded {
+    padding: $padding * 2;
+}
+
+// Boolean
+$is-debug: true;
+
+// Lists
+$list1: 1.5em 1em 0 2em;
+$list2: Helvetica, Arial, sans-serif;
+
+//Maps
+$map: (key1: value1, key2: value2, key3: value3);

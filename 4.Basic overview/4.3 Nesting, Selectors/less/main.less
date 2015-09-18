@@ -1,0 +1,32 @@
+// main.less
+
+header {
+    color: black;
+
+    .navigation {
+        font-size: 12px;
+    }
+    .logo {
+        width: 300px;
+
+        @media screen and (max-width: 768px) {
+            width: auto;
+        }
+    }
+
+    &.red {
+        color: red;
+    }
+
+    .blue-theme & {
+        color: blue;
+    }
+}
+
+.pager {
+
+    &-item {
+        display: inline-block;
+        margin: 0 2px;
+    }
+}

@@ -1,0 +1,83 @@
+// main.scss
+
+// <editor-fold desc="Extend">
+
+.button {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 12px;
+    background-color: orange;
+    border-radius: 6px;
+
+    span {
+        color: white;
+    }
+}
+
+.button-green {
+    @extend .button;
+    background-color: green;
+}
+
+.button-grey {
+    @extend .button;
+    background-color: darkgray;
+}
+
+// </editor-fold>
+
+// <editor-fold desc="Mixins">
+@mixin alert() {
+    font: {
+        family: Arial;
+        size: 12px;
+        weight: bold;
+    }
+    color: red;
+}
+
+p.alert {
+    padding: 5px 10px;
+
+    @include alert;
+}
+
+.some-class {
+    @include alert;
+}
+
+@mixin icon-hover-behavior($color: grey){
+    &:hover,
+    .dropdown:hover & {
+        color: $color;
+    }
+}
+
+.icon-info {
+    content: "A";
+    color: black;
+
+    @include icon-hover-behavior;
+}
+
+// </editor-fold>
+
+// <editor-fold desc="Functions">
+
+$grid-width: 40px;
+$gap-width: 10px;
+
+@function grid-width($n) {
+    @return $n * $grid-width + ($n - 1) * $gap-width;
+}
+
+.sidebar {
+    width: grid-width(5);
+}
+
+.content {
+    margin-left: $gap-width;
+    width: grid-width(7);
+}
+
+// </editor-fold>

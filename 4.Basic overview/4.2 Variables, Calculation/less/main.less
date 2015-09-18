@@ -1,0 +1,31 @@
+// main.less
+
+@link-color: #428bca;
+@link-color-hover: darken(@link-color, 10%);
+@padding: 10px;
+
+a {
+    color: @link-color;
+}
+a:hover {
+    color: @link-color-hover;
+}
+p {
+    padding: @padding + 2
+}
+div.padded {
+    padding: @padding * 2;
+}
+
+
+//List
+@list1: banana, tomato, potato, peach;
+
+//n: length(@list);
+@my-selector: extract(@list1, 1);
+
+.@{my-selector} {
+    font-weight: bold;
+    line-height: 40px;
+    margin: 0 auto;
+}

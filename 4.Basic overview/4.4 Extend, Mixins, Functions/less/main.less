@@ -1,0 +1,84 @@
+// main.less
+
+// <editor-fold desc="Extend">
+
+.button {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 12px;
+    background-color: orange;
+    border-radius: 6px;
+
+    span {
+        color: white;
+    }
+}
+
+.button-green {
+    &:extend(.button);
+    background-color: green;
+}
+
+.button-grey {
+    &:extend(.button all);
+    background-color: darkgray;
+}
+// </editor-fold>
+
+// <editor-fold desc="Mixins">
+
+.alert() {
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+}
+
+p.alert {
+    padding: 5px 10px;
+
+    .alert;
+}
+
+.icon-hover-behavior(@color: grey){
+    &:hover,
+    .dropdown:hover & {
+        color: @color;
+    }
+}
+
+.icon-info {
+    content: "A";
+    color: black;
+
+    .icon-hover-behavior();
+}
+
+// </editor-fold>
+
+// <editor-fold desc="Functions">
+.average(@x, @y) {
+    @average: ((@x + @y) / 2);
+    .some-margin() {
+        margin: 0 20px;
+    }
+}
+
+div {
+    .average(16px, 50px);
+    padding: @average;
+    .some-margin();
+}
+
+
+.function() {
+    @width:  100%;
+    @height: 200px;
+}
+
+.some-class {
+    .function();
+    width:  @width / 2;
+    height: @height - 20;
+}
+
+// </editor-fold>

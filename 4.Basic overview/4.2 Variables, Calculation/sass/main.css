@@ -1,0 +1,11 @@
+a {
+  color: #428bca; }
+
+a:hover {
+  color: #3071a9; }
+
+p {
+  padding: 12px; }
+
+div.padded {
+  padding: 20px; }

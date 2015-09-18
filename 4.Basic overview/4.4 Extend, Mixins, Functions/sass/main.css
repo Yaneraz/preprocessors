@@ -1,0 +1,40 @@
+.button, .button-green, .button-grey {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 12px;
+  background-color: orange;
+  border-radius: 6px; }
+  .button span, .button-green span, .button-grey span {
+    color: white; }
+
+.button-green {
+  background-color: green; }
+
+.button-grey {
+  background-color: darkgray; }
+
+p.alert {
+  padding: 5px 10px;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  color: red; }
+
+.some-class {
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  color: red; }
+
+.icon-info {
+  content: "A";
+  color: black; }
+  .icon-info:hover, .dropdown:hover .icon-info {
+    color: grey; }
+
+.sidebar {
+  width: 240px; }
+
+.content {
+  margin-left: 10px;
+  width: 340px; }

@@ -1,0 +1,8 @@
+p.dark {
+  background-color: black;
+  color: #dddddd;
+}
+p.light {
+  background-color: white;
+  color: #555555;
+}

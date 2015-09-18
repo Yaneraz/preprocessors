@@ -1,0 +1,24 @@
+header {
+  color: black;
+}
+header .navigation {
+  font-size: 12px;
+}
+header .logo {
+  width: 300px;
+}
+@media screen and (max-width: 768px) {
+  header .logo {
+    width: auto;
+  }
+}
+header.red {
+  color: red;
+}
+.blue-theme header {
+  color: blue;
+}
+.pager-item {
+  display: inline-block;
+  margin: 0 2px;
+}

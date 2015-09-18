@@ -1,0 +1,27 @@
+// main.scss
+
+header {
+    color: black;
+
+    .navigation {
+        font-size: 12px;
+    }
+    .logo {
+        width: 300px;
+    }
+
+    &.red {
+        color: red;
+    }
+
+    .blue-theme & {
+        color: blue;
+    }
+}
+
+.pager {
+
+    &-item {
+        display: inline-block;
+    }
+}
