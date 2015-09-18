@@ -53,6 +53,14 @@ p.alert {
     .icon-hover-behavior();
 }
 
+.mixin() {
+    box-shadow+: inset 0 0 10px #555;
+}
+.myclass {
+    .mixin();
+    box-shadow+: 0 0 20px black;
+}
+
 // </editor-fold>
 
 // <editor-fold desc="Functions">
